@@ -3,8 +3,13 @@
 .header {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.5rem;
   color: var(--text);
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    margin:0;
 }
 
 .navLogo {
@@ -17,16 +22,25 @@
     width: 100%;
 }
 
+.nav-symbols {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
 }
 
 .cart {
-  height: 35px;
-  width: 35px;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: 0.5rem;
 }
 
+.cart:active, .car:hover, .cart:focus {
+    color: var(--text)
+}
 .menu {
 display: flex;
 width: 100%;
@@ -52,10 +66,9 @@ li {
 }
 
 #nav-icon {
-  width: 40px;
+  width: 30px;
   height: 20px;
   position: relative;
-  top: 0.5rem;
   right: 0.2rem;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -71,7 +84,7 @@ li {
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 6px;
+  height: 4px;
   width: 100%;
   background: var(--primary);
   border-radius: 9px;
@@ -92,15 +105,15 @@ li {
 }
 
 #nav-icon span:nth-child(2) {
-  top: 13px;
+  top: 8px;
 }
 
 #nav-icon span:nth-child(3) {
-  top: 26px;
+  top: 16px;
 }
 
 #nav-icon.open span:nth-child(1) {
-  top: 18px;
+  top: 8px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -113,7 +126,7 @@ li {
 }
 
 #nav-icon.open span:nth-child(3) {
-  top: 18px;
+  top: 8px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
