@@ -1,0 +1,149 @@
+/*Mobile First*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  color: var(--text);
+}
+
+.nav-title {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin:0;
+}
+
+.navLogo {
+  display: flex;
+}
+
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-symbols {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.cart {
+  color: var(--text);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.cart:active, .car:hover, .cart:focus {
+    color: var(--text)
+}
+.menu {
+display: flex;
+width: 100%;
+flex-direction: column;
+justify-content: left;
+padding: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-hidden {
+  display: none !important;
+}
+
+.user-tools {
+    display: flex;
+    flex-direction: column;
+    padding:0 0 0 1rem;
+}
+
+.nav-user a,-nav-user a:active,
+.nav-user a:visited {
+    color: var(--text);
+}
+
+.nav-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 220px;
+  color: var(--text);
+
+
+}
+
+#nav-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  right: 0.2rem;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 8px;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 16px;
+}
+
+#nav-icon.open span:nth-child(1) {
+  top: 8px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon.open span:nth-child(3) {
+  top: 8px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}

@@ -1,0 +1,24 @@
+/* Mobile First */
+
+.searching {
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    ;
+  }
+  
+  .search-text {
+    font-size: 1.1rem;
+    border-radius: 0.7rem;
+    margin: 0 0.5rem;
+    border: 2px solid;
+    border-color: var(--secondary);
+    outline: none;
+    color: var(--text);
+   
+  }
+
+  .search-label{
+    font-size: 1.2rem;
+  }

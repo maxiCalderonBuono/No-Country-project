@@ -8,7 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/91231a0f83.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/suscription.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>GetPass</title>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -18,25 +25,44 @@
 <body>
     <header class="header">
         <div class="navHeader">
-            <a th:href="#" class="navLogo">
-                <img class="logo" src="assets/images/logo.jpeg" alt="">
-                <h1 class="title">GetPass</h1>
-            </a>
-            <div class="navUser">
-                <a th:href="#"> Mi cuenta </a>
-                <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/index.html" class="navLogo">
+            <img class="logo mr-2" src="assets/images/logo-png.png" alt="" />
+            <p class="nav-title">GetPass</p>
+          </a>
+          
+          <div class="nav-symbols">
+            <a href="/emptyCart.html"
+              ><i class="fa-solid fa-cart-shopping cart fa-lg"></i
+            ></a>
+            <div id="nav-icon">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
+          </div>
         </div>
-        <nav>
-            <ul class="categories">
-                <li>Familia</li>
-                <li>Deportes</li>
-                <li>Musica</li>
-                <li>Teatro</li>
-                <li>Especiales</li>
-            </ul>
+  
+  
+        <nav class="nav-body nav-pages nav-hidden">
+          <ul class="menu">
+            <li>Familia</li>
+            <li>Deportes</li>
+            <li>Musica</li>
+            <li>Teatro</li>
+            <li>Especiales</li>
+          </ul>
+  
+          <div class="user-tools nav-hidden">
+            <div class="navUser mr-4">
+              <a th:href="/cargaEvento.html"> Cargar evento </a>
+            </div>
+  
+            <div class="navUser">
+              <a th:href="#"> Mi cuenta </a>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
     <form class="p-4">
         <div class="form-group">
             <label for="exampleInputEmail1">Nombre</label>
@@ -52,27 +78,31 @@
         </div>
         <div class="mb-5">
             <label for="formFileLg" class="form-label">Banner</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
+            <input class="form-control form-control-md" id="formFileLg" type="file">
           </div>
         <button type="submit" class="btn btn-primary">Confirmar</button>
     </form>
+    <script src="hamburguer-menu.js"></script>
+    <script
+      src="https://kit.fontawesome.com/91231a0f83.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        const botonConfirmar = document.querySelector('.btn');
-        botonConfirmar.addEventListener('click', (e) => {
-            e.preventDefault();
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Evento cargado con exito",
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            setTimeout( () =>{
-                window.location.href = "/index.html";
-                
-            },2000)
-            
-        })
+      const botonConfirmar = document.querySelector(".btn");
+      botonConfirmar.addEventListener("click", (e) => {
+        e.preventDefault();
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Suscripcion exitosa",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.href = "/index.html";
+        }, 2000);
+      });
     </script>
 </body>
 
