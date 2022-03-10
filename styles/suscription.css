@@ -12,7 +12,8 @@
 
 .main-title {
   font-size: 1.5rem;
-  padding: 1rem; }
+  padding: 1rem;
+}
 
 .btn-suscribe {
   /* background-color: ; */
@@ -28,15 +29,12 @@
   padding: 7px 10px 7px 10px;
   transition: background-color 0.4s ease;
   background-color: #139dff;
-}
-
-a, a:active,
-a:visited {
   text-decoration: none;
-  color: #fff;
 }
 
-.user-tools a, .user-tools a:active,
+
+.user-tools a,
+.user-tools a:active,
 .user-tools a:visited {
   text-decoration: none;
   color: var(--text);
@@ -54,5 +52,3 @@ a:visited {
 .select {
   border-radius: 0.5rem;
 }
-
-

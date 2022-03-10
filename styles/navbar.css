@@ -15,6 +15,7 @@
 
 .navLogo {
   display: flex;
+  text-decoration: none !important;
 }
 
 .navHeader {
