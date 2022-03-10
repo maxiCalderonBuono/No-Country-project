@@ -1,11 +1,11 @@
 /* Mobile First */
 
 .searching {
-  color: var(--secondary);
+    color: var(--secondary);
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-weight: 700;
+    ;
   }
   
   .search-text {
@@ -16,5 +16,9 @@
     border-color: var(--secondary);
     outline: none;
     color: var(--text);
-    box-shadow: 0px 0px 0px 0px 0px;
+   
+  }
+
+  .search-label{
+    font-size: 1.2rem;
   }
