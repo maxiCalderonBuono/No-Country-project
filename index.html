@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/91231a0f83.js" crossorigin="anonymous"></script>
+    <title>GetPass</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="navHeader">
+
+            <a th:href="#" class="navLogo">
+                <img class="logo" src="assets/images/logo-png.png" alt="">
+                <h1 class="title">GetPass</h1>
+            </a>
+
+            <div class="d-flex">
+                <div class="navUser mr-4">
+                    <a th:href="/cargaEvento.html"> Cargar evento </a>
+                </div>
+
+                <div class="navUser">
+                    <a th:href="#"> Mi cuenta </a>
+                    <a href="/emptyCart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <nav>
+            <ul class="categories">
+                <li>Familia</li>
+                <li>Deportes</li>
+                <li>Musica</li>
+                <li>Teatro</li>
+                <li>Especiales</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="splide mb-3">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="assets/images/evento-musica.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="assets/images/evento-game.webp" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="assets/images/evento-circo.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="assets/images/evento-musica-2.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="assets/images/evento-festival.jpg" alt="">
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <form class="searching mb-5">
+
+        <label for="search-text">ENCONTRÁ LOS MEJORES EVENTOS DE TU CIUDAD</label>
+        <input id="search-text" type="text" class="search-text col-10" autocomplete="off" placeholder="Buscar evento"
+            name="">
+
+    </form>
+
+    <section class="suscribe mb-5"></section>
+
+    <section class="row p-3 g-4 w-100 m-0">
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top rounded"
+                    src="https://www.cirquedusoleil.com/-/media/cds/images/shows/bazzar/new/thumbnail_share/bazzar_thumbnail_454x454.jpg?db=web&la=es&vs=1&hash=F285EC6AD89A4694C48E0472232628EA372A4E0C"
+                    alt="Card image">
+
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Cirque Du Soleil</h5>
+                    <h6 class="card-subtitle mb-2"> Martes 12 de Marzo 22hs</h6>
+                    <p class="card-text text-muted">Teatro Luxor, Avenida Libertad, Villa Carlos Paz, Cordoba, Argentina
+                    </p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top"
+                    src="https://autoentrada-com-uploads.eventbrain.net/images/thumbs/49ed22f1187c1660c42a-carlos_paz_web_400X400-01.jpg?1642711085"
+                    alt="Card image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">"SEX" Viví Tu Experiencia</h5>
+                    <h6 class="card-subtitle mb-2"> Viernes 25 de Febrero 22hs</h6>
+                    <p class="card-text text-muted">Teatro Melos, Villa Carlos Paz, Córdoba, Argentina</p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top rounded"
+                    src="https://autoentrada-com-uploads.eventbrain.net/images/thumbs/0966fb5a797eebc227d7-tik_400_x_400_%281%29.jpg?1640272424"
+                    alt="Card image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">"Cenamos en La Cama"</h5>
+                    <h6 class="card-subtitle mb-2"> Domingo 6 de Marzo 22hs</h6>
+                    <p class="card-text text-muted">Teatro Candilejas, Villa Carlos Paz, Provincia de Córdoba, Argentina
+                    </p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top rounded"
+                    src="https://autoentrada-com-uploads.eventbrain.net/images/thumbs/07e88a46179e2ef111d3-LA-PAILONETA-400x400.jpg?1639052371"
+                    alt="Card image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">La Pailoneta del Humor</h5>
+                    <h6 class="card-subtitle mb-2"> Martes 12 de Marzo 22hs</h6>
+                    <p class="card-text text-muted">Teatro Luxor, Avenida Libertad, Villa Carlos Paz, Cordoba, Argentina
+                    </p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top rounded"
+                    src="https://www.cirquedusoleil.com/-/media/cds/images/shows/bazzar/new/thumbnail_share/bazzar_thumbnail_454x454.jpg?db=web&la=es&vs=1&hash=F285EC6AD89A4694C48E0472232628EA372A4E0C"
+                    alt="Card image">
+
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Cirque Du Soleil</h5>
+                    <h6 class="card-subtitle mb-2"> Martes 12 de Marzo 22hs</h6>
+                    <p class="card-text text-muted">Teatro Luxor, Avenida Libertad, Villa Carlos Paz, Cordoba, Argentina
+                    </p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top"
+                    src="https://autoentrada-com-uploads.eventbrain.net/images/thumbs/49ed22f1187c1660c42a-carlos_paz_web_400X400-01.jpg?1642711085"
+                    alt="Card image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">"SEX" Viví Tu Experiencia</h5>
+                    <h6 class="card-subtitle mb-2"> Viernes 25 de Febrero 22hs</h6>
+                    <p class="card-text text-muted">Teatro Melos, Villa Carlos Paz, Córdoba, Argentina</p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top rounded"
+                    src="https://autoentrada-com-uploads.eventbrain.net/images/thumbs/0966fb5a797eebc227d7-tik_400_x_400_%281%29.jpg?1640272424"
+                    alt="Card image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">"Cenamos en La Cama"</h5>
+                    <h6 class="card-subtitle mb-2"> Domingo 6 de Marzo 22hs</h6>
+                    <p class="card-text text-muted">Teatro Candilejas, Villa Carlos Paz, Provincia de Córdoba, Argentina
+                    </p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 animate__animated animate__pulse mb-5">
+            <div class="card mb-3 h-100">
+
+                <img class="card-img-top rounded"
+                    src="https://autoentrada-com-uploads.eventbrain.net/images/thumbs/07e88a46179e2ef111d3-LA-PAILONETA-400x400.jpg?1639052371"
+                    alt="Card image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">La Pailoneta del Humor</h5>
+                    <h6 class="card-subtitle mb-2"> Martes 12 de Marzo 22hs</h6>
+                    <p class="card-text text-muted">Teatro Luxor, Avenida Libertad, Villa Carlos Paz, Cordoba, Argentina
+                    </p>
+                    <a href="#" class="btn btn-sm trigger" data-toggle="modal" data-target="#exampleModal">Comprar
+                        entradas</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+
+                <div class="modal-header" id="buy">
+                    <h5 class="modal-title" id="exampleModalLabel">Adquirí tus entradas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="modal-close fa-solid fa-x mr-2"></i>
+                    </button>
+                </div>
+
+
+
+                <div class="modal-header modal-hidden" id="welcome">
+                    <h5 class="modal-title" id="exampleModalLabel">Bienvenidos a GetPass</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-welcome">
+                        <i class="modal-close fa-solid fa-x mr-2"></i>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+
+                    <img id="modal-img" class="modal-img mb-4" src="" alt="portada evento">
+
+                    <div id="modal-data">
+                        <div class="d-flex flex-column">
+                            <label for="tickets">Cantidad de entradas</label>
+                            <div class="d-flex justify-content-center mb-3 mt-2">
+                                <i class="fa-solid fa-circle-minus fa-2x" id="minus"></i>
+                                <input class="modal-input mx-2" type="text" id="tickets" name="tickets"
+                                    autocomplete="off">
+                                <i class="fa-solid fa-circle-plus fa-2x" id="plus"></i>
+                            </div>
+                        </div>
+
+                        <div class="resume d-flex flex-column mb-3">
+                            <p>Resumen de tu compra</p>
+                            <p>Precio entrada: $ <span id="price">300</span> </p>
+                            <div class="d-flex">
+                                <p>Impuestos: $<span id="taxes">750</span> </p>
+                                <i class="fa-solid fa-circle-question ml-2"></i>
+                            </div>
+                            <P>Total: $ <span id="total"></span></P>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center" id="controls">
+                        <button id="purchase-btn" class="btn login-btn col-11 mb-4 p-1" type="submit">
+                            Finalizar compra
+                        </button>
+
+                        <button id="navigate-btn" class="btn navigate-btn col-11 mb-4 p-1" type="submit">
+                            Continuar navegando
+                        </button>
+                    </div>
+
+                    <div class="modal-hidden" id="top-description">
+                        <p>Un solo lugar donde encontrar los mejores eventos de tu ciudad</p>
+                        <p>Todavía no tienes una cuenta? <span id="sign-up">Regístrate gratis</span></p>
+                    </div>
+
+                    <div class="d-flex flex-col flex-wrap justify-content-center modal-hidden" id="modal-main-content">
+                        <div class="modal-media-google col-11 md:w-1/2 p-1 mb-4">
+                            <a class="w-full d-flex" ref="#">
+                                <img src="/assets/images/google-logo.jpg" style="width:25px; height:25px">
+                                <p class="ml-2 mb-0"> Continuar con google</p>
+                            </a>
+                        </div>
+
+                        <div class="modal-media-facebook col-11 md:w-1/2 p-1 mb-4">
+
+                            <a class="w-full d-flex" ref="#">
+                                <img src="/assets/images/logo-facebook.png" style="width:25px; height:25px">
+                                <p class="ml-2 mb-0"> Continuar con Facebook</p>
+                            </a>
+                        </div>
+
+                        <!-- <div><h6 class="modal-line">o</h6></div> -->
+                        <form class="d-flex flex-column col-11 justify-content-center p-0">
+                            <div class="md:flex flex-row flex-wrap -mx-4">
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="name">Name</label>
+                                    <input class="modal-input p-2" type="text" name="name" id="name" placeholder="Joe"
+                                        autocomplete="off" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="user">User</label>
+                                    <input class="modal-input p-2" type="text" name="user" id="user"
+                                        placeholder="Joe123" autocomplete="off" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="lastname">Apellido</label>
+                                    <input class="modal-input p-2" type="text" name="lastname" id="lastname"
+                                        placeholder="Dow" autocomplete="off" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4">
+                                    <label for="email">Email</label>
+                                    <input class="modal-input p-2" type="email" name="email" id="email"
+                                        placeholder="example@example.com" autocomplete="off" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4">
+                                    <label for="password">Password</label>
+                                    <input class="modal-input p-2" type="password" name="password" id="password"
+                                        placeholder="5+ letras" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="password2">Repeat password</label>
+                                    <input class="modal-input p-2" type="password" name="password2" id="password2"
+                                        placeholder="5+ letras" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="dni">DNI</label>
+                                    <input class="modal-input p-2" type="number" name="dni" id="dni"
+                                        placeholder="xx xxx xxx" required autocomplete="off">
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="birthday">Birthday</label>
+                                    <input class="modal-input p-2" type="date" name="birthday" id="birthday"
+                                        placeholder="1/1/1" required>
+                                </div>
+
+                                <div class="d-flex flex-column col-12 md:w-1/2 px-0 mb-4 sign-up-modal modal-hidden">
+                                    <label for="phone">Repeat password</label>
+                                    <input class="modal-input p-2" type="tel" name="phone" id="phone"
+                                        placeholder="+5492316852741" required>
+                                </div>
+
+                                <button class="btn login-btn col-12 mb-5 p-1" id="login-btn" type="submit">
+                                    Iniciar Sesión
+                                </button>
+                                <button class="btn login-btn col-12 mb-5 p-1 sign-up-modal modal-hidden" type="submit">
+                                    Registrarse con email
+                                </button>
+                            </div>
+                        </form>
+                        <p class="modal-footer-password"><span id="forget-password">Olvidaste tu contraseña?</span></p>
+                        <p>Al dar click en el botón de login o continuar, acepto los <span>términos de uso </span> y
+                            <span>política de privacidad </span> de GetPass
+                        </p>
+                        <p class="modal-footer-login modal-hidden"">Ya tienes una cuenta? <span id=" log-in">Inicia
+                            sesión</span></p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="top-footer">
+            <a th:href="#" class="navLogo">
+                <img class="logo" src="assets/images/logo-png.png" alt="">
+                <h1 class="title">GetPass</h1>
+            </a>
+
+            <ul class="menu-options">
+                <li class="options"><a href="#">Home</a></li>
+                <li class="options"><a href="#">Acerca de nosotros</a></li>
+                <li class="options"><a href="#">Ubicación</a></li>
+                <li class="options"><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="bottom-footer">
+
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+<script src="slider.js"></script>
+<script src="copyright.js"></script>
+<script src="modal.js"></script>
+
+</html>
