@@ -19,8 +19,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/suscription.css">
+    <link rel="stylesheet" href="/styles/searching.css">
+    <link rel="stylesheet" href="/styles/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -29,11 +35,11 @@
         <div class="navHeader">
 
             <a th:href="#" class="navLogo">
-                <img class="logo" src="assets/images/logo-png.png" alt="">
+                <img class="logo mr-2" src="assets/images/logo-png.png" alt="">
                 <h1 class="title">GetPass</h1>
             </a>
 
-            <div class="d-flex">
+            <div class="d-flex nav-hidden">
                 <div class="navUser mr-4">
                     <a th:href="/cargaEvento.html"> Cargar evento </a>
                 </div>
@@ -43,16 +49,20 @@
                     <a href="/emptyCart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
-
+            <div id="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
         </div>
-        <nav>
-            <ul class="categories">
+        <nav class="nav-body nav-hidden">
+            <ul class="menu">
                 <li>Familia</li>
                 <li>Deportes</li>
                 <li>Musica</li>
                 <li>Teatro</li>
                 <li>Especiales</li>
-            </ul>
+            </ul>  
         </nav>
     </header>
     <div class="splide mb-3">
@@ -79,15 +89,17 @@
     </div>
 
 
-    <form class="searching mb-5">
+    <form class="searching mb-4">
 
         <label for="search-text">ENCONTRÁ LOS MEJORES EVENTOS DE TU CIUDAD</label>
-        <input id="search-text" type="text" class="search-text col-10" autocomplete="off" placeholder="Buscar evento"
+        <input id="search-text" type="text" class="search-text" autocomplete="off" placeholder="Buscar evento"
             name="">
 
     </form>
 
-    <section class="suscribe mb-5"></section>
+    <section class="suscribe mb-5">
+        <button class="btn btn-suscribe">SUSCRIBIRME</button>
+    </section>
 
     <section class="row p-3 g-4 w-100 m-0">
 
@@ -406,7 +418,7 @@
 
     <footer>
         <div class="top-footer">
-            <a th:href="#" class="navLogo">
+            <a th:href="#" class="footer-logo">
                 <img class="logo" src="assets/images/logo-png.png" alt="">
                 <h1 class="title">GetPass</h1>
             </a>
@@ -428,5 +440,6 @@
 <script src="slider.js"></script>
 <script src="copyright.js"></script>
 <script src="modal.js"></script>
+<script src="hamburguer-menu.js"></script>
 
 </html>

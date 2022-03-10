@@ -1,0 +1,27 @@
+/* Mobile First */
+
+.suscribe {
+    position: relative;
+    display:flex;
+    width: 100%;
+    height: 180px;
+    background-image: url("/assets/images/SLIDE_sin\ boton.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .btn-suscribe {
+    /* background-color: ; */
+    position: absolute;
+    bottom: 0.3rem;
+    left: 2.5rem;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 7px 10px 7px 10px;
+    transition: background-color 0.4s ease;
+    background-color: #139DFF;
+  }

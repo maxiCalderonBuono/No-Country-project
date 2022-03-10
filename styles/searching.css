@@ -1,0 +1,13 @@
+/* Mobile First */
+
+.searching {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .search-text { 
+    border-radius: 0.7rem;
+    margin: 0 0.8rem;
+  }
