@@ -36,6 +36,12 @@ a:visited {
   color: #fff;
 }
 
+.user-tools a, .user-tools a:active,
+.user-tools a:visited {
+  text-decoration: none;
+  color: var(--text);
+}
+
 .nav-pages {
   border-bottom: 0.1rem solid #dae1e7;
 }
