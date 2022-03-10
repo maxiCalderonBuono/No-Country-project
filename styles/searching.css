@@ -1,14 +1,20 @@
 /* Mobile First */
 
 .searching {
+  color: var(--secondary);
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 0.9rem;
+    font-weight: 700;
   }
   
   .search-text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     border-radius: 0.7rem;
-    margin: 0 0.8rem;
+    margin: 0 0.5rem;
+    border: 2px solid;
+    border-color: var(--secondary);
+    outline: none;
+    color: var(--text);
+    box-shadow: 0px 0px 0px 0px 0px;
   }
