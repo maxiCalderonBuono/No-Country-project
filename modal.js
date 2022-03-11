@@ -1,5 +1,6 @@
 const signUpData = document.querySelectorAll(".sign-up-modal");
 const modalContent = document.querySelector(".modal-content");
+const modalDialog = document.querySelector(".modal-dialog");
 const signUp = document.getElementById("sign-up");
 const logIn = document.getElementById("log-in");
 const loginBtn = document.getElementById("login-btn");
@@ -11,6 +12,7 @@ const buttons = document.querySelectorAll(".trigger");
 const navigate = document.querySelector(".navigate-btn");
 const closeBtn = document.querySelector(".close");
 const closeWelcome = document.getElementById("close-welcome");
+const closePurchase = document.getElementById("close-purchase");
 const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
 const tickets = document.getElementById("tickets");
@@ -25,9 +27,19 @@ const controls = document.getElementById("controls");
 const description = document.getElementById("top-description");
 const mainContent = document.getElementById("modal-main-content");
 const modal = document.querySelector(".modal");
+const endPurchase = document.getElementById("end-purchase");
+const payment= document.querySelector(".modal-payment");
+const confirmPurchase=document.getElementById("confirm-purchase")
+
+
+
 
 signUp.addEventListener("click", (e) => {
   e.preventDefault();
+
+ 
+
+  //modalDialog.style.height = "100%";
 
   modalContent.style.height = "100%";
 
@@ -70,7 +82,10 @@ buttons.forEach((button) => {
     const imgSrc = button.parentNode.parentNode.childNodes[1].src;
     modalImg.src = imgSrc;
 
-    modalContent.style.height = "100%";
+    //modalDialog.style.height = "100vh";
+
+    modalContent.style.height = "100vh";
+    
     tickets.value = 1;
     total.innerText = Number(price.textContent) + Number(taxes.textContent);
 
@@ -92,6 +107,16 @@ closeWelcome.addEventListener("click", (e) => {
   welcome.classList.add("modal-hidden");
   description.classList.add("modal-hidden");
   mainContent.classList.add("modal-hidden");
+  endPurchase.classList.add("modal-hidden");
+  payment.classList.add("modal-hidden");
+  logIn.click();
+});
+
+closePurchase.addEventListener("click", (e) => {
+  e.preventDefault();
+  
+  endPurchase.classList.add("modal-hidden");
+  payment.classList.add("modal-hidden");
   logIn.click();
 });
 
@@ -146,7 +171,7 @@ purchase.addEventListener("click", (e) => {
 
   controls.classList.add("modal-hidden");
 
-  modalContent.style.height = "100vh";
+  //modalContent.style.height = "100vh";
 
   description.classList.remove("modal-hidden");
 
@@ -160,6 +185,8 @@ document.addEventListener('keydown', (e) => {
     welcome.classList.add("modal-hidden");
     description.classList.add("modal-hidden");
     mainContent.classList.add("modal-hidden");
+    endPurchase.classList.add("modal-hidden");
+  payment.classList.add("modal-hidden");
     logIn.click();
   }
 })
@@ -168,9 +195,20 @@ let observer = new MutationObserver( () => {
   welcome.classList.add("modal-hidden");
   description.classList.add("modal-hidden");
   mainContent.classList.add("modal-hidden");
+  endPurchase.classList.add("modal-hidden");
+  payment.classList.add("modal-hidden");
   logIn.click(); 
-  modalContent.style.height = "100%"
+  //modalContent.style.height = "100%"
 });
 
 observer.observe(modal, {attributes:true});
+
+loginBtn.addEventListener("click" , ()=> {
+  endPurchase.classList.remove("modal-hidden");
+  welcome.classList.add("modal-hidden");
+  description.classList.add("modal-hidden");
+  mainContent.classList.add("modal-hidden");
+  payment.classList.remove("modal-hidden");
+})
+
 
