@@ -43,3 +43,25 @@ footer {
     background-color: var(--text);
     text-align: center;
   }
+
+
+  @media only screen and (min-width: 1200px) {
+
+    .footer-logo {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .menu-options {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0;
+  }
+
+  .logo {
+    margin-right: 1rem;
+  }
+
+  }

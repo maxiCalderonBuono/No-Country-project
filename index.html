@@ -41,7 +41,7 @@
             </a>
 
             <div class="nav-symbols">
-            <a href="/emptyCart.html"><i class="fa-solid fa-cart-shopping cart fa-lg"></i></a>
+          
             <div id="nav-icon">
                 <span></span>
                 <span></span>
@@ -49,7 +49,7 @@
               </div>
             </div>
         </div>
-
+       
         <nav class="nav-body nav-hidden">
 
             <ul class="menu">
@@ -60,7 +60,7 @@
                 <li>Especiales</li>
             </ul> 
             
-            <div class="user-tools nav-hidden ">
+            <div class="user-tools nav-hidden">
                 <div class="nav-user mr-4">
                     <a href="/cargaEvento.html"> Cargar evento </a>
                 </div>
@@ -69,6 +69,7 @@
                     <a th:href="#"> Mi cuenta </a>
                     
                 </div>
+                <a href="/emptyCart.html"><i class="fa-solid fa-cart-shopping cart fa-lg"></i></a>
             </div>
         </nav>
     </header>
@@ -286,7 +287,84 @@
                     </button>
                 </div>
 
+                <div class="modal-header modal-hidden" id="end-purchase">
+                    <h5 class="modal-title" id="exampleModalLabel">Finalizar compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-purchase">
+                        <i class="modal-close fa-solid fa-x mr-2"></i>
+                    </button>
+                  </div>
+
                 <div class="modal-body">
+
+
+                    <div class="modal-payment modal-hidden">
+                        <form>
+                          <div class="form-group owner">
+                            <label for="owner">Nombre (como figura en la tarjeta)</label>
+                            <input type="text" class="form-control" id="owner" placeholder="Joe Dow"/>
+                          </div>
+                          <div class="form-group CVV">
+                            <label for="cvv">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="XXX"/>
+                          </div>
+                          <div class="form-group" id="card-number-field">
+                            <label for="cardNumber">Número tarjeta</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="1111 2222 3333 4444" />
+                          </div>
+                          <div class="form-group" id="expiration-date">
+                            <label>Fecha expiracion</label>
+                            <select class="select">
+                              <option value="01">January</option>
+                              <option value="02">February</option>
+                              <option value="03">March</option>
+                              <option value="04">April</option>
+                              <option value="05">May</option>
+                              <option value="06">June</option>
+                              <option value="07">July</option>
+                              <option value="08">August</option>
+                              <option value="09">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                            </select>
+                            <select class="select">
+                              <option value="22">2022</option>
+                              <option value="23">2022</option>
+                              <option value="24">2024</option>
+                              <option value="25">2025</option>
+                              <option value="26">2026</option>
+                              <option value="27">2027</option>
+                            </select>
+                          </div>
+                          <div class="form-group mb- d-flex justify-content-around" id="credit_cards">
+                            <img
+                              class="creditImg"
+                              src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
+                              id="visa"
+                            />
+                            <img
+                              class="creditImg"
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png"
+                              id="mastercard"
+                            />
+                            <img
+                              class="creditImg"
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1200px-American_Express_logo_%282018%29.svg.png"
+                              id="amex"
+                            />
+                            <img
+                              class="creditImg"
+                              src="https://bitcoin.org/img/icons/opengraph.png?1644775669"
+                              id="amex"
+                            >
+                          </div>
+                          <div class="form-group" id="pay-now">
+                            <button type="submit" class="btn login-btn col-12 mb-5 p-1" id="confirm-purchase">
+                              Confirmar compra
+                            </button>
+                          </div>
+                        </form>
+                      </div>
 
 
                     <img id="modal-img" class="modal-img mb-4" src="" alt="portada evento">
@@ -450,5 +528,26 @@
 <script src="copyright.js"></script>
 <script src="modal.js"></script>
 <script src="hamburguer-menu.js"></script>
+<script>
+    const botonConfirmar = document.getElementById("confirm-purchase");
 
+    const cerrar = document.getElementById("close-purchase");
+    
+    
+    botonConfirmar.addEventListener("click", (e) => {
+      e.preventDefault();
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Ya tienes tus entadas!",
+        showConfirmButton: false,
+        timer: 1500,
+      }).then((result) => {
+        cerrar.click();
+        window.location.href = "/index.html";
+      })
+      
+     
+    });
+  </script>
 </html>

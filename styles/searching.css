@@ -22,3 +22,14 @@
   .search-label{
     font-size: 1.2rem;
   }
+
+
+  @media only screen and (min-width: 1200px) {
+    .search-label{
+      font-size: 2rem;
+    }
+
+    .search-text {
+      font-size: 1.5rem;}
+  
+  }

@@ -8,7 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/91231a0f83.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/suscription.css">
+    <link rel="stylesheet" href="/styles/searching.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>GetPass</title>
 
@@ -16,33 +20,15 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="navHeader">
-            <a th:href="#" class="navLogo">
-                <img class="logo" src="assets/images/logo.jpeg" alt="">
-                <h1 class="title">GetPass</h1>
-            </a>
-            <div class="navUser">
-                <a th:href="#"> Mi cuenta </a>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-        </div>
-        <nav>
-            <ul class="categories">
-                <li>Familia</li>
-                <li>Deportes</li>
-                <li>Musica</li>
-                <li>Teatro</li>
-                <li>Especiales</li>
-            </ul>
-        </nav>
-    </header>
+   
+
+
     <section class="col text-center">
         <div class="d-flex flex-column justify-content-center">
             <img class="empty-cart align-self-center" src="/assets/images/empty-cart.png" alt="empty-cart">
             <h5 class="empty-text text-center py-5">Tu carrito está vacío</h5>
         </div>
-        <button class="btn btn-sm rounded-lg">Comprar</button>
+        <a href="/index.html"><button class="btn btn-sm rounded-lg">Comprar</button></a>
     </section>
 </body>
 

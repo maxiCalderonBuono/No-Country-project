@@ -16,3 +16,8 @@ navIcon.addEventListener("click", () => {
     userTools.classList.toggle("nav-hidden");
 })
 
+if (window.innerWidth >= 1200) {
+    ulList.classList.remove("nav-hidden");
+    userTools.classList.remove("nav-hidden");
+    navIcon.classList.add("nav-hidden");
+}

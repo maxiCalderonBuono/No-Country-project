@@ -8,25 +8,25 @@
 }
 
 .nav-title {
-    color: var(--text);
-    font-size: 1.5rem;
-    margin:0;
+  color: var(--text);
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .navLogo {
   display: flex;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .navHeader {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-symbols {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -40,15 +40,17 @@
   margin-right: 0.5rem;
 }
 
-.cart:active, .car:hover, .cart:focus {
-    color: var(--text)
+.cart:active,
+.car:hover,
+.cart:focus {
+  color: var(--text);
 }
 .menu {
-display: flex;
-width: 100%;
-flex-direction: column;
-justify-content: left;
-padding: 1rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: left;
+  padding: 1rem;
 }
 
 li {
@@ -60,14 +62,15 @@ li {
 }
 
 .user-tools {
-    display: flex;
-    flex-direction: column;
-    padding:0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1rem;
 }
 
-.nav-user a,-nav-user a:active,
+.nav-user a,
+-nav-user a:active,
 .nav-user a:visited {
-    color: var(--text);
+  color: var(--text);
 }
 
 .nav-body {
@@ -77,8 +80,6 @@ li {
   width: 100%;
   height: 220px;
   color: var(--text);
-
-
 }
 
 #nav-icon {
@@ -147,4 +148,51 @@ li {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .nav-title {
+    color: var(--text);
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+
+ 
+  .nav-body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .user-tools {
+    width: 70%;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  .nav-header {
+    order: 0;
+  }
+
+  .cart {
+    padding-left: 0.5rem;
+  }
 }
