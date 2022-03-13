@@ -33,33 +33,14 @@
 <body>
     <header class="header">
 
-        <div class="navHeader">
+        <div class="top-header">
 
-            <a th:href="#" class="navLogo">
+            <a th:href="#" class="top-logo">
                 <img class="logo mr-2" src="assets/images/logo-png.png" alt="">
                 <p class="nav-title">GetPass</p>
             </a>
 
-            <div class="nav-symbols">
-          
-            <div id="nav-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-        </div>
-       
-        <nav class="nav-body nav-hidden">
 
-            <ul class="menu">
-                <li>Familia</li>
-                <li>Deportes</li>
-                <li>Musica</li>
-                <li>Teatro</li>
-                <li>Especiales</li>
-            </ul> 
-            
             <div class="user-tools nav-hidden">
                 <div class="nav-user mr-4">
                     <a href="/cargaEvento.html"> Cargar evento </a>
@@ -69,7 +50,40 @@
                     <a th:href="#"> Mi cuenta </a>
                     
                 </div>
-                <a href="/emptyCart.html"><i class="fa-solid fa-cart-shopping cart fa-lg"></i></a>
+            </div>
+
+            <a href="/emptyCart.html"><i class="fa-solid fa-cart-shopping cart fa-lg"></i></a>
+
+            
+          
+            <div id="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            
+        </div>
+       
+        <nav class="navbar ">  
+
+            <ul class="categories">
+                <li>Familia</li>
+                <li>Deportes</li>
+                <li>Musica</li>
+                <li>Teatro</li>
+                <li>Especiales</li>
+            </ul>
+            
+            <div class="categories-tools">
+                <div class="nav-user mr-4">
+                    <a href="/cargaEvento.html"> Cargar evento </a>
+                </div>
+
+                <div class="nav-user">
+                    <a th:href="#"> Mi cuenta </a>
+                    
+                </div>
             </div>
         </nav>
     </header>
