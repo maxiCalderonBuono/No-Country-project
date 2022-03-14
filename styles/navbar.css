@@ -19,11 +19,14 @@
   width: 100%;
 }
 
-
 .top-logo {
   display: flex;
   width: 85%;
   text-decoration: none;
+}
+
+.nav-hidden {
+  display: none;
 }
 
 
@@ -60,14 +63,8 @@ li {
   list-style: none;
 }
 
-.nav-hidden {
-  display: none !important;
-}
-
 .user-tools {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 0 1rem;
+  display: none;
 }
 
 .nav-user a,
@@ -173,4 +170,17 @@ li {
     justify-content: space-evenly;
     margin:0;
   }
+
+  .categories-tools{
+    display:none;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+ .nav-hidden {
+   display: flex;
+ }
+
 }
